@@ -1,0 +1,88 @@
+.food-card {
+  display: flex;
+  width: 100%;
+  border-top: 1px solid #cbcbcb;
+  height: 8vh;
+  justify-self: center;
+  align-items: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+#content {
+  h1 {
+    font-size: 25px;
+  }
+}
+
+.food-name {
+  font-family: "Roboto Slab";
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7em;
+}
+
+.add-form {
+  font-family: "Roboto Slab", serif;
+  color: #3a3a3a;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+.submit {
+  background-color: #020c40;
+  padding: 10px;
+  border-radius: 8px;
+  width: 50%;
+  margin: 25px 0;
+  color: white;
+  font-family: "Roboto Slab";
+  font-size: 1em;
+  border: none;
+  display: block;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.9;
+    cursor: pointer;
+  }
+}
+
+#edit {
+  color: #343434;
+  background: none;
+  border: none;
+  font-family: "Roboto Slab";
+  font-weight: bold;
+  font-size: 15px;
+  margin-right: 2vw;
+  margin-left: 12vw;
+  cursor: pointer;
+}
+
+#remove {
+  background: none;
+  border: none;
+  font-family: "Roboto Slab";
+  font-weight: bold;
+  font-size: 15px;
+  color: #343434;
+  cursor: pointer;
+}
+
+#remove-white {
+  background: none;
+  border: none;
+  font-family: "Roboto Slab";
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+}

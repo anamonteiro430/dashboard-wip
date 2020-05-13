@@ -1,0 +1,166 @@
+#home {
+  display: flex;
+  margin: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+#background {
+  width: 90%;
+  overflow: hidden;
+}
+
+#background-content {
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 10vh;
+  padding: 5px;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  flex-direction: column;
+  padding-bottom: 20px;
+
+  h3 {
+    font-size: 25px;
+  }
+
+  img {
+    margin-bottom: 5vh;
+  }
+}
+
+#background-title {
+  font-family: "Roboto Slab", serif;
+  color: #3a3a3a;
+}
+
+#random {
+  width: 70%;
+  margin: 3vh;
+}
+
+#random-content {
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 7vh;
+}
+#random-title {
+  font-family: "Roboto Slab", serif;
+  color: #3a3a3a;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 1.3em;
+}
+
+.random-card {
+  display: flex;
+  width: 100%;
+  border-top: 1px solid #cbcbcb;
+
+  height: 8vh;
+}
+
+#buttons-bg {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto Slab";
+  font-size: 17px;
+
+  #file-upload {
+    width: 15%;
+  }
+}
+
+.intro {
+  width: 92%;
+  height: 90%;
+  font-family: "Roboto Slab";
+  text-align: start;
+  background-color: white;
+  padding: 0px 20px;
+
+  h2 {
+    text-align: center;
+  }
+}
+
+#background-page {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+
+.tiles {
+  background-image: url("../images/tiles.jpg");
+  width: 45%;
+  background-size: 7%;
+  margin-right: 20px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto Slab";
+  text-align: start;
+  background-color: white;
+  padding: 0px 20px;
+}
+
+#login {
+  font-family: "Roboto Slab";
+
+  h1 {
+    font-size: 27px;
+  }
+  form {
+  }
+  input {
+    border: none;
+    width: 200px;
+    margin-bottom: 15px;
+    border: 1px solid #010a3b;
+    border-radius: 3px;
+  }
+
+  button {
+    border-radius: 4px;
+    font-family: "Roboto Slab", serif;
+    background-color: #010a3b;
+    width: 5%;
+    border: none;
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+  }
+}
+
+.red {
+  background-color: #010a3b;
+  color: white;
+}
+
+.whitee {
+  display: flex;
+  justify-content: center;
+  #edit {
+    color: white;
+    font-weight: normal;
+  }
+  button {
+    #removeM {
+      color: white;
+    }
+  }
+}
