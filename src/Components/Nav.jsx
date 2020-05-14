@@ -5,15 +5,16 @@ export const Nav = (props) => {
   console.log("PROPS FROM NAV", props);
   const [unreadMessages, setUnreadMessages] = useState([]);
 
-  /* useEffect(() => {
+  useEffect(() => {
     function filter_dates(event) {
       return event.name == "admin";
     }
 
     setUnreadMessages(props.messages.filter(filter_dates));
-  }, []); */
+  }, []);
 
   const signout = () => {
+    console.log("signing out");
     localStorage.removeItem("token");
     props.history.push("/");
   };

@@ -36,7 +36,7 @@ function App() {
   return (
     <div className="App">
       <Route>
-        <Nav messages={messages} setMessages={setMessages} />
+        <Nav />
       </Route>
       <Route exact path="/" component={Login} />
       <Route path="/signup" component={Signup} />
