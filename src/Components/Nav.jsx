@@ -14,8 +14,8 @@ export const Nav = (props) => {
   }, []); */
 
   const signout = () => {
-    props.history.push("/");
     localStorage.removeItem("token");
+    props.history.push("/");
   };
 
   /*  console.log("props.messages", props.messages);

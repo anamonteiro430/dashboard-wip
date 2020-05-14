@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from saxios";
 
 export const getToken = () => {
   localStorage.getItem("token");
