@@ -47,7 +47,7 @@ export const Stay = () => {
   useEffect(() => {
     Modal.setAppElement("body");
     axios
-      .get("http://wip-api.herokuapp.com/api/stay")
+      .get("https://wip-api.herokuapp.com/api/stay")
       .then((res) => {
         setStay(res.data);
       })
@@ -72,7 +72,7 @@ export const Stay = () => {
   const addStay = (e) => {
     e.preventDefault();
     axios
-      .post("http://wip-api.herokuapp.com/api/stay", newStay)
+      .post("https://wip-api.herokuapp.com/api/stay", newStay)
       .then((res) => {
         setStay(res.data.data);
         console.log("newStay", newStay);
@@ -92,7 +92,7 @@ export const Stay = () => {
     setLoading(true);
     axios({
       method: "post",
-      url: "http://wip-api.herokuapp.com/api/gallery/upload-images",
+      url: "https://wip-api.herokuapp.com/api/gallery/upload-images",
       data: formData,
       headers: { "Content-Type": "multipart/form-data" },
     })

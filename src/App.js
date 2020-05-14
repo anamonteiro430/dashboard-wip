@@ -22,7 +22,7 @@ function App() {
   /*  //getting all messages
   useEffect(() => {
     axios
-      .get("http://wip-api.herokuapp.com/api/contact")
+      .get("https://wip-api.herokuapp.com/api/contact")
       .then((res) => {
         setMessages(res.data);
       })

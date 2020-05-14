@@ -46,7 +46,7 @@ export const Food = () => {
   useEffect(() => {
     Modal.setAppElement("body");
     axios
-      .get("http://wip-api.herokuapp.com/api/food")
+      .get("https://wip-api.herokuapp.com/api/food")
       .then((res) => {
         setFood(res.data);
       })
@@ -71,7 +71,7 @@ export const Food = () => {
   const addFood = (e) => {
     e.preventDefault();
     axios
-      .post("http://wip-api.herokuapp.com/api/food", newFood)
+      .post("https://wip-api.herokuapp.com/api/food", newFood)
       .then((res) => {
         setFood(res.data.data);
         setModal(false);
@@ -89,7 +89,7 @@ export const Food = () => {
     setLoading(true);
     axios({
       method: "post",
-      url: "http://wip-api.herokuapp.com/api/gallery/upload-images",
+      url: "https://wip-api.herokuapp.com/api/gallery/upload-images",
       data: formData,
       headers: { "Content-Type": "multipart/form-data" },
     })

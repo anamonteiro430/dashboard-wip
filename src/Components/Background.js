@@ -9,7 +9,7 @@ export const Background = (props) => {
   console.log("WHATT", props);
   useEffect(() => {
     axios
-      .get("http://wip-api.herokuapp.com/api/background/")
+      .get("https://wip-api.herokuapp.com/api/background/")
       .then((res) => {
         props.setBg(res);
       })
@@ -36,7 +36,7 @@ export const Background = (props) => {
     setLoading(true);
     axios({
       method: "post",
-      url: "http://wip-api.herokuapp.com/api/gallery/upload-images",
+      url: "https://wip-api.herokuapp.com/api/gallery/upload-images",
       data: formData,
       headers: { "Content-Type": "multipart/form-data" },
     })
@@ -65,7 +65,7 @@ export const Background = (props) => {
     const changes = props.state.updatedurl;
     setLoading(true);
     axios
-      .put("http://wip-api.herokuapp.com/api/background/1", {
+      .put("https://wip-api.herokuapp.com/api/background/1", {
         url: changes,
       })
       .then((res) => {

@@ -16,7 +16,7 @@ export const Login = (props) => {
     e.preventDefault();
     setLoading(true);
     axios
-      .post("http://wip-api.herokuapp.com/api/auth/login", state)
+      .post("https://wip-api.herokuapp.com/api/auth/login", state)
       .then((res) => {
         console.log(res);
         setLoading(false);

@@ -15,7 +15,7 @@ export const Dashboard = () => {
 
   useEffect(() => {
     axios
-      .get("http://wip-api.herokuapp.com/api/background")
+      .get("https://wip-api.herokuapp.com/api/background")
       .then((res) => {
         const newImg = res.data[0].url;
         setState({

@@ -12,7 +12,7 @@ export const Signup = (props) => {
     console.log("token", localStorage.getItem("token"));
     console.log("stateee", state);
     axios
-      .post("http://wip-api.herokuapp.com/api/auth/register", state)
+      .post("https://wip-api.herokuapp.com/api/auth/register", state)
       .then((res) => {
         console.log(res);
         props.history.push("/");

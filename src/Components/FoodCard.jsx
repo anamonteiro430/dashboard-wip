@@ -50,7 +50,7 @@ export const FoodCard = (props) => {
     console.log("this", state);
     const id = state.id;
     axios
-      .put(`http://wip-api.herokuapp.com/api/food/${id}`, state)
+      .put(`https://wip-api.herokuapp.com/api/food/${id}`, state)
       .then((res) => {
         props.setFood(res.data.data);
         setModal(false);
@@ -70,7 +70,7 @@ export const FoodCard = (props) => {
     const id = state.id;
     console.log(id);
     axios
-      .delete(`http://wip-api.herokuapp.com/api/food/${id}`)
+      .delete(`https://wip-api.herokuapp.com/api/food/${id}`)
       .then((res) => {
         props.setFood(res.data.data);
       })
@@ -88,7 +88,7 @@ export const FoodCard = (props) => {
     setLoading(true);
     axios({
       method: "post",
-      url: "http://wip-api.herokuapp.com/api/gallery/upload-images",
+      url: "https://wip-api.herokuapp.com/api/gallery/upload-images",
       data: formData,
       headers: { "Content-Type": "multipart/form-data" },
     })
