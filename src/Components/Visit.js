@@ -45,7 +45,7 @@ export const Visit = () => {
   useEffect(() => {
     Modal.setAppElement("body");
     axios
-      .get("http://localhost:5000/api/visit")
+      .get("http://wip-api.herokuapp.com/api/visit")
       .then((res) => {
         setVisit(res.data);
       })
@@ -70,7 +70,7 @@ export const Visit = () => {
   const addVisit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/api/visit", newVisit)
+      .post("http://wip-api.herokuapp.com/api/visit", newVisit)
       .then((res) => {
         setVisit(res.data.data);
         setModal(false);
@@ -88,7 +88,7 @@ export const Visit = () => {
     setLoading(true);
     axios({
       method: "post",
-      url: "http://localhost:5000/api/gallery/upload-images",
+      url: "http://wip-api.herokuapp.com/api/gallery/upload-images",
       data: formData,
       headers: { "Content-Type": "multipart/form-data" },
     })

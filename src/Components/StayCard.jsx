@@ -50,7 +50,7 @@ export const StayCard = (props) => {
     console.log("this", state);
     const id = state.id;
     axios
-      .put(`http://localhost:5000/api/stay/${id}`, state)
+      .put(`http://wip-api.herokuapp.com/api/stay/${id}`, state)
       .then((res) => {
         console.log("yes", res.data.data);
         props.setStay(res.data.data);
@@ -72,7 +72,7 @@ export const StayCard = (props) => {
     const id = state.id;
     console.log("Im removing ", id);
     axios
-      .delete(`http://localhost:5000/api/stay/${id}`)
+      .delete(`http://wip-api.herokuapp.com/api/stay/${id}`)
       .then((res) => {
         console.log("NOW", res.data.data);
         props.setStay(res.data.data);
@@ -91,7 +91,7 @@ export const StayCard = (props) => {
     setLoading(true);
     axios({
       method: "post",
-      url: "http://localhost:5000/api/gallery/upload-images",
+      url: "http://wip-api.herokuapp.com/api/gallery/upload-images",
       data: formData,
       headers: { "Content-Type": "multipart/form-data" },
     })

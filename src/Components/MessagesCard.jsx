@@ -33,7 +33,7 @@ export const MessagesCard = (props) => {
     console.log("updating");
     setModal(true);
     axios
-      .put(`http://localhost:5000/api/contact/${id}`)
+      .put(`http://wip-api.herokuapp.com/api/contact/${id}`)
       .then((res) => {
         console.log("THIS IS RESSSS,", res);
       })
@@ -43,7 +43,7 @@ export const MessagesCard = (props) => {
   const removeRandom = () => {
     const id = state.id;
     axios
-      .delete(`http://localhost:5000/api/random/${id}`)
+      .delete(`http://wip-api.herokuapp.com/api/random/${id}`)
       .then((res) => {
         props.setRandoms(res.data.data);
       })

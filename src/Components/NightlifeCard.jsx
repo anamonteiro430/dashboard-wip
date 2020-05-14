@@ -49,7 +49,7 @@ export const NightlifeCard = (props) => {
     e.preventDefault();
     const id = state.id;
     axios
-      .put(`http://localhost:5000/api/nightlife/${id}`, state)
+      .put(`http://wip-api.herokuapp.com/api/nightlife/${id}`, state)
       .then((res) => {
         props.setNightlife(res.data.data);
         setModal(false);
@@ -68,7 +68,7 @@ export const NightlifeCard = (props) => {
   const removeNightlife = () => {
     const id = state.id;
     axios
-      .delete(`http://localhost:5000/api/nightlife/${id}`)
+      .delete(`http://wip-api.herokuapp.com/api/nightlife/${id}`)
       .then((res) => {
         props.setNightlife(res.data.data);
       })
@@ -86,7 +86,7 @@ export const NightlifeCard = (props) => {
     setLoading(true);
     axios({
       method: "post",
-      url: "http://localhost:5000/api/gallery/upload-images",
+      url: "http://wip-api.herokuapp.com/api/gallery/upload-images",
       data: formData,
       headers: { "Content-Type": "multipart/form-data" },
     })

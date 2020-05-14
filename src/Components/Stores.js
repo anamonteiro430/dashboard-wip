@@ -45,7 +45,7 @@ export const Stores = () => {
   useEffect(() => {
     Modal.setAppElement("body");
     axios
-      .get("http://localhost:5000/api/stores")
+      .get("http://wip-api.herokuapp.com/api/stores")
       .then((res) => {
         setStores(res.data);
       })
@@ -71,7 +71,7 @@ export const Stores = () => {
     e.preventDefault();
     console.log("adding");
     axios
-      .post("http://localhost:5000/api/stores", newStore)
+      .post("http://wip-api.herokuapp.com/api/stores", newStore)
       .then((res) => {
         setStores(res.data.data);
         setModal(false);
@@ -89,7 +89,7 @@ export const Stores = () => {
     setLoading(true);
     axios({
       method: "post",
-      url: "http://localhost:5000/api/gallery/upload-images",
+      url: "http://wip-api.herokuapp.com/api/gallery/upload-images",
       data: formData,
       headers: { "Content-Type": "multipart/form-data" },
     })

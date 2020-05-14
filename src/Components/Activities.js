@@ -45,7 +45,7 @@ export const Activities = () => {
   useEffect(() => {
     Modal.setAppElement("body");
     axios
-      .get("http://localhost:5000/api/activities")
+      .get("http://wip-api.herokuapp.com/api/activities")
       .then((res) => {
         setActivities(res.data);
       })
@@ -70,7 +70,7 @@ export const Activities = () => {
   const addActivity = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/api/activities", newActivity)
+      .post("http://wip-api.herokuapp.com/api/activities", newActivity)
       .then((res) => {
         setActivities(res.data.data);
         setModal(false);
@@ -88,7 +88,7 @@ export const Activities = () => {
     setLoading(true);
     axios({
       method: "post",
-      url: "http://localhost:5000/api/gallery/upload-images",
+      url: "http://wip-api.herokuapp.com/api/gallery/upload-images",
       data: formData,
       headers: { "Content-Type": "multipart/form-data" },
     })

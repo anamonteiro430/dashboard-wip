@@ -46,7 +46,7 @@ export const StoreCard = (props) => {
     e.preventDefault();
     const id = state.id;
     axios
-      .put(`http://localhost:5000/api/stores/${id}`, state)
+      .put(`http://wip-api.herokuapp.com/api/stores/${id}`, state)
       .then((res) => {
         props.setStore(res.data.data);
         setModal(false);
@@ -67,7 +67,7 @@ export const StoreCard = (props) => {
     const id = state.id;
     console.log("removing", id);
     axios
-      .delete(`http://localhost:5000/api/stores/${id}`)
+      .delete(`http://wip-api.herokuapp.com/api/stores/${id}`)
       .then((res) => {
         props.setStores(res.data.data);
       })
@@ -85,7 +85,7 @@ export const StoreCard = (props) => {
     setLoading(true);
     axios({
       method: "post",
-      url: "http://localhost:5000/api/gallery/upload-images",
+      url: "http://wip-api.herokuapp.com/api/gallery/upload-images",
       data: formData,
       headers: { "Content-Type": "multipart/form-data" },
     })

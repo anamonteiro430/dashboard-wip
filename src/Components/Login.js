@@ -15,12 +15,14 @@ export const Login = (props) => {
     console.log("handling");
     e.preventDefault();
     setLoading(true);
-    axios.post("http://localhost:5000/api/auth/login", state).then((res) => {
-      console.log(res);
-      setLoading(false);
-      localStorage.setItem("token", res.data.token);
-      props.history.push("/dashboard");
-    });
+    axios
+      .post("http://wip-api.herokuapp.com/api/auth/login", state)
+      .then((res) => {
+        console.log(res);
+        setLoading(false);
+        localStorage.setItem("token", res.data.token);
+        props.history.push("/dashboard");
+      });
   };
 
   const handleChanges = (e) => {
