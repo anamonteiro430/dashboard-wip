@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import logo from "./../images/logo.svg";
 export const Nav = (props) => {
   console.log("PROPS FROM NAV", props);
   const [unreadMessages, setUnreadMessages] = useState([]);
@@ -26,7 +26,7 @@ export const Nav = (props) => {
       <nav id="nav">
         <div className="logo">
           <Link to={`/`} className="logo-link">
-            <h3>whereinPorto</h3>
+            <img src={logo} width="250" />
           </Link>
         </div>
       </nav>

@@ -43,9 +43,9 @@ export const MessagesCard = (props) => {
   const removeRandom = () => {
     const id = state.id;
     axios
-      .delete(`https://wip-api.herokuapp.com/api/random/${id}`)
+      .delete(`https://wip-api.herokuapp.com/api/contact/${id}`)
       .then((res) => {
-        props.setRandoms(res.data.data);
+        props.setMessages(res.data.data);
       })
       .catch((err) => {
         console.log(err);
@@ -84,7 +84,10 @@ export const MessagesCard = (props) => {
 
         <div className="modal-info">
           <div id="message-header">
-            <h2>{props.messages.name}sss</h2>
+            <h2>From: {props.messages.name}</h2>
+            <h3>From: {props.messages.email}</h3>
+            <h2>Subject: {props.messages.subject}</h2>
+            <h2>{props.messages.message}</h2>
           </div>
         </div>
       </Modal>
