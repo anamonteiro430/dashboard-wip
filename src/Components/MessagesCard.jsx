@@ -33,7 +33,7 @@ export const MessagesCard = (props) => {
     console.log("updating");
     setModal(true);
     axios
-      .put(`https://wip-api.herokuapp.com/api/contact/${id}`)
+      .put(`https://wip-api.herokuapp.com//api/contact/${id}`)
       .then((res) => {
         console.log("THIS IS RESSSS,", res);
       })
@@ -43,7 +43,7 @@ export const MessagesCard = (props) => {
   const removeRandom = () => {
     const id = state.id;
     axios
-      .delete(`https://wip-api.herokuapp.com/api/contact/${id}`)
+      .delete(`https://wip-api.herokuapp.com//api/contact/${id}`)
       .then((res) => {
         props.setMessages(res.data.data);
       })
@@ -57,10 +57,11 @@ export const MessagesCard = (props) => {
     <>
       <div className={props.messages.read == 0 ? "food-card red" : "food-card"}>
         <div class="food-name">
-          <h2>{props.messages.subject}</h2>
-          <p>{props.messages.message}</p>
+          <div className="title">
+            <h2>{props.messages.subject}</h2>
+          </div>
         </div>
-        <div className={props.messages.read == 0 ? "whitee" : null}>
+        <div className={props.messages.read === 0 ? "whitee" : null}>
           <button onClick={openMessage} id="edit">
             Abrir
           </button>

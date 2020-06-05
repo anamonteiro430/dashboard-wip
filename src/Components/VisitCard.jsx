@@ -48,7 +48,7 @@ export const VisitCard = (props) => {
     console.log("this", state);
     const id = state.id;
     axios
-      .put(`https://wip-api.herokuapp.com/api/visit/${id}`, state)
+      .put(`https://wip-api.herokuapp.com//api/visit/${id}`, state)
       .then((res) => {
         props.setVisit(res.data.data);
         setModal(false);
@@ -67,7 +67,7 @@ export const VisitCard = (props) => {
   const removeVisit = () => {
     const id = state.id;
     axios
-      .delete(`https://wip-api.herokuapp.com/api/visit/${id}`)
+      .delete(`https://wip-api.herokuapp.com//api/visit/${id}`)
       .then((res) => {
         props.setVisit(res.data.data);
       })
@@ -85,7 +85,7 @@ export const VisitCard = (props) => {
     setLoading(true);
     axios({
       method: "post",
-      url: "https://wip-api.herokuapp.com/api/gallery/upload-images",
+      url: "https://wip-api.herokuapp.com//api/gallery/upload-images",
       data: formData,
       headers: { "Content-Type": "multipart/form-data" },
     })
@@ -115,7 +115,13 @@ export const VisitCard = (props) => {
     <>
       <div className="food-card">
         <div className="food-name">
-          <h2>{props.visit.title}</h2>
+          <div className="title">
+            <h2>{props.visit.title}</h2>
+          </div>
+
+          <div className="type">
+            <h3>{props.visit.type}</h3>
+          </div>
         </div>
         <button onClick={() => setModal(true)} id="edit">
           Editar

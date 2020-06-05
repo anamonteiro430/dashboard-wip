@@ -45,7 +45,7 @@ export const Visit = () => {
   useEffect(() => {
     Modal.setAppElement("body");
     axios
-      .get("https://wip-api.herokuapp.com/api/visit")
+      .get("https://wip-api.herokuapp.com//api/visit")
       .then((res) => {
         setVisit(res.data);
       })
@@ -70,7 +70,7 @@ export const Visit = () => {
   const addVisit = (e) => {
     e.preventDefault();
     axios
-      .post("https://wip-api.herokuapp.com/api/visit", newVisit)
+      .post("https://wip-api.herokuapp.com//api/visit", newVisit)
       .then((res) => {
         setVisit(res.data.data);
         setModal(false);
@@ -88,7 +88,7 @@ export const Visit = () => {
     setLoading(true);
     axios({
       method: "post",
-      url: "https://wip-api.herokuapp.com/api/gallery/upload-images",
+      url: "https://wip-api.herokuapp.com//api/gallery/upload-images",
       data: formData,
       headers: { "Content-Type": "multipart/form-data" },
     })
@@ -118,7 +118,7 @@ export const Visit = () => {
       </button>
       <div id="content">
         <div>
-          <h1>A Visitar</h1>
+          <h1>A Visitar ({visit.length})</h1>
         </div>
 
         <Modal

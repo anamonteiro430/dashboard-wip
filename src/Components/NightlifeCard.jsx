@@ -49,7 +49,7 @@ export const NightlifeCard = (props) => {
     e.preventDefault();
     const id = state.id;
     axios
-      .put(`https://wip-api.herokuapp.com/api/nightlife/${id}`, state)
+      .put(`https://wip-api.herokuapp.com//api/nightlife/${id}`, state)
       .then((res) => {
         props.setNightlife(res.data.data);
         setModal(false);
@@ -68,7 +68,7 @@ export const NightlifeCard = (props) => {
   const removeNightlife = () => {
     const id = state.id;
     axios
-      .delete(`https://wip-api.herokuapp.com/api/nightlife/${id}`)
+      .delete(`https://wip-api.herokuapp.com//api/nightlife/${id}`)
       .then((res) => {
         props.setNightlife(res.data.data);
       })
@@ -86,7 +86,7 @@ export const NightlifeCard = (props) => {
     setLoading(true);
     axios({
       method: "post",
-      url: "https://wip-api.herokuapp.com/api/gallery/upload-images",
+      url: "https://wip-api.herokuapp.com//api/gallery/upload-images",
       data: formData,
       headers: { "Content-Type": "multipart/form-data" },
     })
@@ -116,7 +116,13 @@ export const NightlifeCard = (props) => {
     <>
       <div className="food-card">
         <div className="food-name">
-          <h2>{props.nightlife.title}</h2>
+          <div className="title">
+            <h2>{props.nightlife.title}</h2>
+          </div>
+
+          <div className="type">
+            <h3>{props.nightlife.type}</h3>
+          </div>
         </div>
         <button onClick={() => setModal(true)} id="edit">
           Editar

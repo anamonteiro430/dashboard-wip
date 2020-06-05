@@ -13,7 +13,7 @@ export const Messages = () => {
     console.log("sssssss");
     Modal.setAppElement("body");
     axios
-      .get("https://wip-api.herokuapp.com/api/contact")
+      .get("https://wip-api.herokuapp.com//api/contact")
       .then((res) => {
         console.log(res);
         setUnread(res.data.filter((f) => f.read == 0));
@@ -30,7 +30,7 @@ export const Messages = () => {
     <div id="page">
       <div id="content">
         <div>
-          <h1>My Messages({unread.length})</h1>
+          <h1>My Messages({unread.length} new)</h1>
         </div>
 
         <div id="messages-cards">

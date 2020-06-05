@@ -44,7 +44,7 @@ export const AddFoodModal = (props) => {
     const id = 1;
     Modal.setAppElement("body");
     axios
-      .get(`https://wip-api.herokuapp.com/api/food/${id}`)
+      .get(`https://wip-api.herokuapp.com//api/food/${id}`)
       .then((res) => {
         console.log("res", res);
         props.setBg(res);
@@ -72,7 +72,7 @@ export const AddFoodModal = (props) => {
     e.preventDefault();
     const id = food.id;
     axios
-      .put(`https://wip-api.herokuapp.com/api/food/${id}`, food)
+      .put(`https://wip-api.herokuapp.com//api/food/${id}`, food)
       .then((res) => {
         console.log("yes", res.data.data);
         props.setFood(res.data.data);
@@ -94,7 +94,7 @@ export const AddFoodModal = (props) => {
     setLoading(true);
     axios({
       method: "post",
-      url: "https://wip-api.herokuapp.com/api/gallery/upload-images",
+      url: "https://wip-api.herokuapp.com//api/gallery/upload-images",
       data: formData,
       headers: { "Content-Type": "multipart/form-data" },
     })
@@ -124,7 +124,7 @@ export const AddFoodModal = (props) => {
     const id = food.id;
     console.log("idd", id);
     axios
-      .post(`https://wip-api.herokuapp.com/api/background/${id}`, {
+      .post(`https://wip-api.herokuapp.com//api/background/${id}`, {
         url: changes,
       })
       .then((res) => {

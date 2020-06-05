@@ -21,9 +21,19 @@
   font-family: "Roboto Slab";
   width: 50%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   font-size: 0.7em;
+
+  .title {
+    margin-left: 50px;
+    width: 300px;
+  }
+
+  .type {
+    width: 200px;
+    margin-left: 150px;
+  }
 }
 
 .add-form {

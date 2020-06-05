@@ -46,9 +46,9 @@ export const StoreCard = (props) => {
     e.preventDefault();
     const id = state.id;
     axios
-      .put(`https://wip-api.herokuapp.com/api/stores/${id}`, state)
+      .put(`https://wip-api.herokuapp.com//api/stores/${id}`, state)
       .then((res) => {
-        props.setStore(res.data.data);
+        props.setStores(res.data.data);
         setModal(false);
       })
       .catch((err) => {
@@ -67,7 +67,7 @@ export const StoreCard = (props) => {
     const id = state.id;
     console.log("removing", id);
     axios
-      .delete(`https://wip-api.herokuapp.com/api/stores/${id}`)
+      .delete(`https://wip-api.herokuapp.com//api/stores/${id}`)
       .then((res) => {
         props.setStores(res.data.data);
       })
@@ -85,7 +85,7 @@ export const StoreCard = (props) => {
     setLoading(true);
     axios({
       method: "post",
-      url: "https://wip-api.herokuapp.com/api/gallery/upload-images",
+      url: "https://wip-api.herokuapp.com//api/gallery/upload-images",
       data: formData,
       headers: { "Content-Type": "multipart/form-data" },
     })
@@ -115,7 +115,13 @@ export const StoreCard = (props) => {
     <>
       <div className="food-card">
         <div className="food-name">
-          <h2>{props.stores.title}</h2>
+          <div className="title">
+            <h2>{props.stores.title}</h2>
+          </div>
+
+          <div className="type">
+            <h3>{props.stores.type}</h3>
+          </div>
         </div>
         <button onClick={() => setModal(true)} id="edit">
           Editar
@@ -150,12 +156,12 @@ export const StoreCard = (props) => {
             </p>
 
             <p className="input-group">
-              <label for="tag" class="label">
-                Tag
+              <label for="type" class="label">
+                Categoria
               </label>
-              <select className="input" name="tag" onChange={handleChanges}>
+              <select className="input" name="type" onChange={handleChanges}>
                 <option selected value="">
-                  {state.tag}
+                  {state.type}
                 </option>
                 <option value="Must-Shop">Must-Shop</option>
                 <option value="Markets">Markets</option>
@@ -230,12 +236,12 @@ export const StoreCard = (props) => {
               </p>
 
               <p className="input-group">
-                <label for="type" class="label">
+                <label for="tag" class="label">
                   Tags
                 </label>
                 <input
-                  name="type"
-                  value={state.type}
+                  name="tag"
+                  value={state.tag}
                   placeholder="Type of Cuisine (use ',' to separate)"
                   onChange={handleChanges}
                   type="text"
