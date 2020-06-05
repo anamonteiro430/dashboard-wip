@@ -13,7 +13,7 @@ export const Messages = () => {
     console.log("sssssss");
     Modal.setAppElement("body");
     axios
-      .get("https://wip-api.herokuapp.com//api/contact")
+      .get("https://wip-api.herokuapp.com/api/contact")
       .then((res) => {
         console.log(res);
         setUnread(res.data.filter((f) => f.read == 0));

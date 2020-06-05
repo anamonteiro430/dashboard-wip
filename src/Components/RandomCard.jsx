@@ -48,7 +48,7 @@ export const RandomCard = (props) => {
     e.preventDefault();
     const id = state.id;
     axios
-      .put(`https://wip-api.herokuapp.com//api/random/${id}`, state)
+      .put(`https://wip-api.herokuapp.com/api/random/${id}`, state)
       .then((res) => {
         props.setRandoms(res.data.data);
         setModal(false);
@@ -67,7 +67,7 @@ export const RandomCard = (props) => {
   const removeRandom = () => {
     const id = state.id;
     axios
-      .delete(`https://wip-api.herokuapp.com//api/random/${id}`)
+      .delete(`https://wip-api.herokuapp.com/api/random/${id}`)
       .then((res) => {
         props.setRandoms(res.data.data);
       })
@@ -85,7 +85,7 @@ export const RandomCard = (props) => {
     setLoading(true);
     axios({
       method: "post",
-      url: "https://wip-api.herokuapp.com//api/gallery/upload-images",
+      url: "https://wip-api.herokuapp.com/api/gallery/upload-images",
       data: formData,
       headers: { "Content-Type": "multipart/form-data" },
     })

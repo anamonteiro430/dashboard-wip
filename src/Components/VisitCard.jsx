@@ -48,7 +48,7 @@ export const VisitCard = (props) => {
     console.log("this", state);
     const id = state.id;
     axios
-      .put(`https://wip-api.herokuapp.com//api/visit/${id}`, state)
+      .put(`https://wip-api.herokuapp.com/api/visit/${id}`, state)
       .then((res) => {
         props.setVisit(res.data.data);
         setModal(false);
@@ -67,7 +67,7 @@ export const VisitCard = (props) => {
   const removeVisit = () => {
     const id = state.id;
     axios
-      .delete(`https://wip-api.herokuapp.com//api/visit/${id}`)
+      .delete(`https://wip-api.herokuapp.com/api/visit/${id}`)
       .then((res) => {
         props.setVisit(res.data.data);
       })
@@ -85,7 +85,7 @@ export const VisitCard = (props) => {
     setLoading(true);
     axios({
       method: "post",
-      url: "https://wip-api.herokuapp.com//api/gallery/upload-images",
+      url: "https://wip-api.herokuapp.com/api/gallery/upload-images",
       data: formData,
       headers: { "Content-Type": "multipart/form-data" },
     })

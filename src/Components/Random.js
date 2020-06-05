@@ -47,7 +47,7 @@ export const Random = () => {
   useEffect(() => {
     Modal.setAppElement("body");
     axios
-      .get("https://wip-api.herokuapp.com//api/random/")
+      .get("https://wip-api.herokuapp.com/api/random/")
       .then((res) => {
         setRandoms(res.data);
       })
@@ -77,7 +77,7 @@ export const Random = () => {
     setLoading(true);
     axios({
       method: "post",
-      url: "https://wip-api.herokuapp.com//api/gallery/upload-images",
+      url: "https://wip-api.herokuapp.com/api/gallery/upload-images",
       data: formData,
       headers: { "Content-Type": "multipart/form-data" },
     })
@@ -104,7 +104,7 @@ export const Random = () => {
     e.preventDefault();
     console.log("adding");
     axios
-      .post("https://wip-api.herokuapp.com//api/random", newRandom)
+      .post("https://wip-api.herokuapp.com/api/random", newRandom)
       .then((res) => {
         setRandoms(res.data.data);
         setModal(false);

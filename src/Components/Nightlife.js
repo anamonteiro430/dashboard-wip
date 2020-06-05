@@ -45,7 +45,7 @@ export const Nightlife = () => {
   useEffect(() => {
     Modal.setAppElement("body");
     axios
-      .get("https://wip-api.herokuapp.com//api/nightlife")
+      .get("https://wip-api.herokuapp.com/api/nightlife")
       .then((res) => {
         setNightlife(res.data);
       })
@@ -70,7 +70,7 @@ export const Nightlife = () => {
   const addNightlife = (e) => {
     e.preventDefault();
     axios
-      .post("https://wip-api.herokuapp.com//api/nightlife", newNightlife)
+      .post("https://wip-api.herokuapp.com/api/nightlife", newNightlife)
       .then((res) => {
         setNightlife(res.data.data);
         setModal(false);
@@ -88,7 +88,7 @@ export const Nightlife = () => {
     setLoading(true);
     axios({
       method: "post",
-      url: "https://wip-api.herokuapp.com//api/gallery/upload-images",
+      url: "https://wip-api.herokuapp.com/api/gallery/upload-images",
       data: formData,
       headers: { "Content-Type": "multipart/form-data" },
     })
