@@ -2,4 +2,4 @@
 
 ## Live Demo: https://master.de7igth8d2iuf.amplifyapp.com/
 
-Backoffice of WhereinPorto : https://master.d1fix0uuibcm6e.amplifyapp.com/
+WhereinPorto : https://master.d1fix0uuibcm6e.amplifyapp.com/
